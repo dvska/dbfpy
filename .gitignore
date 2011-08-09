@@ -1,0 +1,11 @@
+CVS
+.cvsignore
+*.bak
+*.pyc
+*.pyo
+*.swp
+*.tmp
+build
+dist
+MANIFEST
+.pypirc
