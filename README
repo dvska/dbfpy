@@ -1,5 +1,10 @@
 Python modules for accessing .dbf (dbase) files
 readme_dbfpy.txt
+
+2011-10-13 dvska
+(en) Hardcoded to produce "0x30 Visual Foxpro" no-memo DBF format with data in cp1251 encoding
+(ru) Читает DBF; пишет в формат "0x30 Visual Foxpro no-memo DBF" в кодировке Windows-1251 (`ANSI`)
+
 jjk  11/15/99
 2000-10-06 Hans Fiby
 

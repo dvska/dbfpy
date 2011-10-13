@@ -6,6 +6,7 @@ TODO:
 
 """
 """History (most recent first):
+13-oct-2011 [dvska] Hardcoded to produce "0x30 Visual Foxpro" no-memo DBF format with data in cp1251 encoding
 14-dec-2010 [als]   added Memo file support
 16-sep-2010 [als]   fromStream: fix century of the last update field
 11-feb-2007 [als]   added .ignoreErrors
@@ -56,7 +57,7 @@ class DbfHeader(object):
     ## instance construction and initialization methods
 
     def __init__(self, fields=None, headerLength=0, recordLength=0,
-        recordCount=0, signature=0x03, lastUpdate=None, ignoreErrors=False,
+        recordCount=0, signature=0x30, lastUpdate=None, ignoreErrors=False,
     ):
         """Initialize instance.
 
@@ -281,7 +282,7 @@ Version (signature): 0x%02x
             _flag = "\x02"
         else:
             _flag = "\0"
-        _codepage = "\0"
+        _codepage = "\xC9" # hardcoded cp1251 aka Cyrillic Windows encoding
         return struct.pack("<4BI2H",
             self.signature,
             self.year - 1900,

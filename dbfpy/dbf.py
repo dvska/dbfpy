@@ -207,7 +207,7 @@ class Dbf(object):
             self.header.setCurrentDate()
             self.header.write(self.stream)
             self.stream.flush()
-            self.memo.flush()
+            #self.memo.flush()
             self._changed = False
 
     def indexOfFieldName(self, name):
